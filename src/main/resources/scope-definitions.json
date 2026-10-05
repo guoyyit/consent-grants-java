@@ -1,0 +1,23 @@
+[
+  {
+    "version": "v1",
+    "items": [
+      {"key": "profile.read",   "status": "ACTIVE",     "displayName": "Read basic profile"},
+      {"key": "email.read",     "status": "ACTIVE",     "displayName": "Read email address"},
+      {"key": "contacts.read",  "status": "ACTIVE",     "displayName": "Read contacts"},
+      {"key": "calendar.read",  "status": "ACTIVE",     "displayName": "Read calendar"}
+    ]
+  },
+  {
+    "version": "v2",
+    "items": [
+      {"key": "profile.read",       "status": "ACTIVE",     "displayName": "Read basic profile"},
+      {"key": "email.read",         "status": "ACTIVE",     "displayName": "Read email address"},
+      {"key": "contacts.read",      "status": "DEPRECATED", "displayName": "Read contacts (legacy aggregate)", "splitInto": ["contacts.phone.read", "contacts.address.read"]},
+      {"key": "contacts.phone.read","status": "ACTIVE",     "displayName": "Read contact phone numbers", "replaces": "contacts.read"},
+      {"key": "contacts.address.read","status": "ACTIVE",   "displayName": "Read contact postal addresses", "replaces": "contacts.read"},
+      {"key": "calendar.read",      "status": "ACTIVE",     "displayName": "Read calendar"},
+      {"key": "offline_access",     "status": "ACTIVE",     "displayName": "Access data while offline"}
+    ]
+  }
+]
